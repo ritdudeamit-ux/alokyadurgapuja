@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Register — 2026 Onam Birla Alokya Residents Event</title>
+<title>Register — Birla Alokya Durga Puja Celebrations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -366,8 +366,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
     <div class="hero-ponnonam">✨ Ponnonam 2026 ✨</div>
     <p class="hero-subtitle">Birla Alokya Residents Event — celebrate as one community! 🥳</p>
     <div class="hero-chips">
-      <span class="chip">📅 Saturday, 26 Sep 2026</span>
-      <span class="chip">⏰ 9:00 AM onwards</span>
+      <span class="chip">📅 Friday, 16th October 2026 - Wednesday, 21st October 2026</span>
+      <span class="chip">⏰ 8:00 AM onwards everyday</span>
       <a class="chip" href="https://maps.app.goo.gl/U1HyHkS6fodXsV8X9" target="_blank" style="text-decoration:none;background:rgba(255,255,255,.3)">🗺 View on Google Maps</a>
       <button class="btn-schedule" onclick="openSchedule()">🎉 View Programme</button>
     </div>
@@ -383,7 +383,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
 <!-- Program highlights -->
 <div id="highlights-section" style="background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-hard);padding:16px 20px;text-align:center">
   <div class="hi-intro">
-    <div class="hi-q">What awaits you?</div>
+    <div class="hi-q">Magic unfolds in </div>
     <div class="countdown-wrap">
       <div class="countdown-title">🌼 begins in</div>
       <div class="countdown-units">
@@ -394,13 +394,10 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
         <div class="cd-unit"><div class="cd-num" id="cd-mins">--</div><div class="cd-label">Mins</div></div>
       </div>
     </div>
-    <div class="hi-qsub">Tap the tiles to show interest</div>
+    <div class="hi-qsub">Tap the tile to show interest</div>
   </div>
   <div class="highlights">
-    <div class="highlight" data-tile="Marwari & North Indian Paid Buffet Dinner on 15th Oct" onclick="toggleLike(this)"><div class="hi">🌸</div><div class="htext"><div class="ht">Marwari & North Indian Paid Buffet Dinner on 15th Oct</div><div class="hs">Delicious Dinner Feast</div></div><div class="like-btn"><span class="like-heart">♥</span><span class="like-count"></span></div></div>
-    <div class="highlight" data-tile="South Indian Lavish Paid Banana Leaf Lunch on 19th Oct"   onclick="toggleLike(this)"><div class="hi">🍛</div><div class="htext"><div class="ht">South Indian Lavish Paid Banana Leaf Lunch on 19th Oct</div><div class="hs">Grand feast on banana leaf</div></div><div class="like-btn"><span class="like-heart">♥</span><span class="like-count"></span></div></div>
-    <div class="highlight" data-tile="Bengali & North Indian Paid Buffet Dinner on 21st Oct" onclick="toggleLike(this)"><div class="hi">💃</div><div class="htext"><div class="ht">Bengali & North Indian Paid Buffet Dinner on 21st Oct</div><div class="hs">Veg and Non-Veg Feast</div></div><div class="like-btn"><span class="like-heart">♥</span><span class="like-count"></span></div></div>
-    <div class="highlight" data-tile="Free Mahabhog Lunch on 18th Oct"    onclick="toggleLike(this)"><div class="hi">🎮</div><div class="htext"><div class="ht">Free Mahabhog Lunch on 18th Oct</div><div class="hs">Prasad for all</div></div><div class="like-btn"><span class="like-heart">♥</span><span class="like-count"></span></div></div>
+   <div class="highlight" data-tile="Free Mahabhog Lunch on 18th Oct, Sunday"    onclick="toggleLike(this)"><div class="hi">🎮</div><div class="htext"><div class="ht">Free Mahabhog Lunch on 18th Oct</div><div class="hs">Prasad for all</div></div><div class="like-btn"><span class="like-heart">♥</span><span class="like-count"></span></div></div>
    </div>
 </div>
 
@@ -442,22 +439,30 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
     </div>
 
     <div class="card">
-      <h2>&#127869;&#65039; Sadhya Coupons</h2>
-      <p style="font-size:12px;color:var(--gray);margin:0 0 12px">How many Sadhya coupons do you need? <span style="font-size:11px">&#8212; One coupon is issued per person</span></p>
+      <h2>&#127869;&#65039; Mahabhog Lunch Coupons</h2>
+      <p style="font-size:12px;color:var(--gray);margin:0 0 12px">How many Mahabhog Lunch coupons do you need? <span style="font-size:11px">&#8212; One coupon is issued per person</span></p>
       <div class="pax-row">
         <div class="field">
-          <label>Adults <span style="color:var(--gray);font-weight:400">13+ yrs &nbsp;(&#8377;600 / coupon)</span></label>
+          <label>Adults <span style="color:var(--gray);font-weight:400">6+ yrs &nbsp;(&#8377;600 / coupon)</span></label>
           <input id="inp-adults" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
         </div>
         <div class="field">
-          <label>Kids <span style="color:var(--gray);font-weight:400">6–12 yrs &nbsp;(&#8377;400 / coupon)</span></label>
+          <label>Kids <span style="color:var(--gray);font-weight:400">3–6 yrs  : Free</span></label>
           <input id="inp-kids" type="number" min="0" max="20" value="0" oninput="calcAmount()"/>
+        </div>
+        <div class="field">
+          <label>Adults Guests <span style="color:var(--gray);font-weight:400">6+ yrs &nbsp;(&#8377;350 / coupon)</span></label>
+          <input id="inp-adults" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
+        </div>
+        <div class="field">
+          <label>Guest Kids <span style="color:var(--gray);font-weight:400">>3–6 yrs : Free</span></label>
+          <input id="inp-adults" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
         </div>
       </div>
       <div class="amount-box">
         <div class="label">Total Amount to Pay</div>
-        <div class="breakdown" id="amt-breakdown">1 adult × ₹600</div>
-        <div class="total" id="amt-total">₹600</div>
+        <div class="breakdown" id="amt-breakdown">1 guest adult × ₹350</div>
+        <div class="total" id="amt-total">₹350</div>
       </div>
     </div>
 
