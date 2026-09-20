@@ -420,13 +420,12 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
       <div class="field" id="f-phone">
         <label>WhatsApp Number *</label>
         <input id="inp-phone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" maxlength="10" oninput="this.value=this.value.replace(/\D/g,'')"/>
-        <div class="hint">Your ticket will be sent to this number</div>
         <div class="err-msg">Please enter a valid 10-digit mobile number</div>
       </div>
       <div class="field" id="f-email">
         <label>Email Address <span style="color:var(--gray);font-weight:400">(optional)</span></label>
         <input id="inp-email" type="email" inputmode="email" placeholder="e.g. priya@gmail.com" autocomplete="email"/>
-        <div class="hint">Ticket will also be sent to this email if provided</div>
+        <div class="hint">Confirmation will be sent to this email if provided</div>
         <div class="err-msg">Enter a valid email address</div>
       </div>
     </div>
@@ -436,15 +435,15 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
       <p style="font-size:12px;color:var(--gray);margin:0 0 12px">How many Mahabhog Lunch coupons do you need? <span style="font-size:11px">&#8212; One coupon is issued per person</span></p>
       <div class="pax-row">
         <div class="field">
-          <label>Adults <span style="color:var(--gray);font-weight:400">6+ yrs &nbsp;(&#8377;600 / coupon)</span></label>
+          <label>Resident Adults <span style="color:var(--gray);font-weight:400">6+ yrs  : Free &nbsp;(&#8377;600 / coupon)</span></label>
           <input id="inp-adults" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
         </div>
         <div class="field">
-          <label>Kids <span style="color:var(--gray);font-weight:400">3–6 yrs  : Free</span></label>
+          <label>Resident Kids <span style="color:var(--gray);font-weight:400">3–6 yrs  : Free</span></label>
           <input id="inp-kids" type="number" min="0" max="20" value="0" oninput="calcAmount()"/>
         </div>
         <div class="field">
-          <label>Adults Guests <span style="color:var(--gray);font-weight:400">6+ yrs &nbsp;(&#8377;350 / coupon)</span></label>
+          <label>Guest Adults <span style="color:var(--gray);font-weight:400">6+ yrs &nbsp;(&#8377;350 / coupon)</span></label>
           <input id="inp-adults" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
         </div>
         <div class="field">
