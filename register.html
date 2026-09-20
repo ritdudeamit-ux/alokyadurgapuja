@@ -444,11 +444,11 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
         </div>
         <div class="field">
           <label>Guest Adults <span style="color:var(--gray);font-weight:400">6+ yrs &nbsp;(&#8377;350 / coupon)</span></label>
-          <input id="inp-adults" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
+          <input id="inp-guest-adults" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
         </div>
         <div class="field">
           <label>Guest Kids <span style="color:var(--gray);font-weight:400">>3–6 yrs : Free</span></label>
-          <input id="inp-adults" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
+          <input id="inp-guest-kids" type="number" min="1" max="20" value="1" oninput="calcAmount()"/>
         </div>
       </div>
       <div class="amount-box">
@@ -519,7 +519,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
         </div>
         <div class="amount-box" style="margin-top:14px;margin-bottom:0">
           <div class="label">Amount to Pay</div>
-          <div class="total" id="pay-amount">₹600</div>
+          <div class="total" id="pay-amount">₹350</div>
         </div>
       </div>
     </div>
@@ -528,7 +528,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
       <h2>🧾 Payment Confirmation</h2>
       <ol class="upi-steps" style="margin-bottom:18px">
         <li>Tap your UPI app above, or scan the QR code</li>
-        <li>Verify the pre-filled amount — <strong id="pay-amount-2">₹600</strong> — and complete the payment</li>
+        <li>Verify the pre-filled amount — <strong id="pay-amount-2">₹350</strong> — and complete the payment</li>
         <li>Return here — copy the transaction ID from your UPI app</li>
         <li>Paste it below and tap Submit</li>
       </ol>
@@ -558,17 +558,16 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
         <div class="ticket-body">
           <div class="ticket-fields">
             <div class="tf"><div class="tk">Villament</div><div class="tv gld" id="conf-flat">—</div></div>
-            <div class="tf"><div class="tk">Adults</div><div class="tv" id="conf-adults">—</div></div>
-            <div class="tf"><div class="tk">Kids</div><div class="tv" id="conf-kids">—</div></div>
+            <div class="tf"><div class="tk">Resident Adults</div><div class="tv" id="conf-adults">—</div></div>
+            <div class="tf"><div class="tk">Resident Kids</div><div class="tv" id="conf-kids">—</div></div>
+            <div class="tf"><div class="tk">Guest Adults</div><div class="tv" id="conf-kids">—</div></div>
+            <div class="tf"><div class="tk">Guest Kids</div><div class="tv" id="conf-kids">—</div></div>
             <div class="tf"><div class="tk">Amount</div><div class="tv gld" id="conf-amount">—</div></div>
             <div class="tf"><div class="tk">Status</div><div class="tv grn">Pending &#10003;</div></div>
           </div>
           <div class="ticket-fields">
-            <div class="tf"><div class="tk">Date</div><div class="tv">26 Sep 2026</div></div>
+            <div class="tf"><div class="tk">Date</div><div class="tv">18 October 2026</div></div>
             <div class="tf"><div class="tk">Venue</div><div class="tv">Clubhouse, MPH</div></div>
-          </div>
-          <div id="conf-ticket-row" style="display:none" class="ticket-fields" style="margin-top:10px">
-            <div class="tf"><div class="tk">Ticket ID</div><div class="tv" id="conf-ticket" style="font-family:monospace;letter-spacing:2px;color:#e8c05a">—</div></div>
           </div>
           <div id="conf-email-row" style="display:none" class="ticket-fields">
             <div class="tf"><div class="tk">Email</div><div class="tv" id="conf-email" style="font-size:13px">—</div></div>
@@ -712,7 +711,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
 // ── CONFIG — paste your Apps Script Web App URL here ──────
 const API_URL = "https://script.google.com/macros/s/AKfycby8AFTR1cUwBgTcXh1YBrIlEm7nW6otrrqvyYtLQ2310v_EhNUhLv76iw0Tb2yNa4TGnw/exec";
 const UPI_ID  = "sajeevgeorge84@okhdfcbank";
-const UPI_NAME = "2026 Onam BA Event";
+const UPI_NAME = "2026 BA Durga Puja";
 
 // ── State ─────────────────────────────────────────────────
 let formData = {};
@@ -746,7 +745,9 @@ addEventListener("DOMContentLoaded", () => {
 function calcAmount() {
   const adults = Math.max(0, parseInt(document.getElementById("inp-adults").value) || 0);
   const kids   = Math.max(0, parseInt(document.getElementById("inp-kids").value)   || 0);
-  const total  = (guest adults * 350) + (kids * 0);
+  const guestadults = Math.max(0, parseInt(document.getElementById("inp-guest adults").value) || 0);
+  const guestkids = Math.max(0, parseInt(document.getElementById("inp-guest-kids").value) || 0);
+  const total  = (guestadults * 350);
 
   let breakdown = "";
   if (adults > 0) breakdown += adults + " adult" + (adults > 1 ? "s" : "") + " × ₹350";
