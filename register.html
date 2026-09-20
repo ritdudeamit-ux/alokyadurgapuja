@@ -752,8 +752,8 @@ function calcAmount() {
   let breakdown = "";
   if (adults > 0) breakdown += adults + " adult" + (adults > 1 ? "s" : "") + " × ₹0";
   if (kids   > 0) breakdown += (breakdown ? "  +  " : "") + kids + " kid" + (kids > 1 ? "s" : "") + " × ₹0";
-  if (guestadults > 0) breakdown += guestadults + " guest adult" + (guestadults > 1 ? "s" : "") + " × ₹350";
-  if (guestkids   > 0) breakdown += (breakdown ? "  +  " : "") + kids + " guest kid" + (guestkids > 1 ? "s" : "") + " × ₹0";
+  if (guestadults   > 0) breakdown += (breakdown ? "  +  " : "") + guestadults + " guest adults" + (guestadults > 1 ? "s" : "") + " × ₹350";
+  if (guestkids   > 0) breakdown += (breakdown ? "  +  " : "") + guestkids + " guest kids" + (guestkids > 1 ? "s" : "") + " × ₹0";
   if (!breakdown)  breakdown = "—";
 
   document.getElementById("amt-breakdown").textContent = breakdown;
@@ -764,14 +764,16 @@ function calcAmount() {
 }
 
 function generateQR() {
-  const adults = Math.max(1, parseInt(document.getElementById("inp-adults").value) || 1);
+  const adults = Math.max(0, parseInt(document.getElementById("inp-adults").value) || 0);
   const kids   = Math.max(0, parseInt(document.getElementById("inp-kids").value)   || 0);
-  const total  = (adults * 600) + (kids * 400);
+  const guestadults = Math.max(0, parseInt(document.getElementById("inp-guest-adults").value) || 0);
+  const guestkids = Math.max(0, parseInt(document.getElementById("inp-guest-kids").value) || 0);
+  const total  = (guestadults * 350) ;
   const upiStr = "upi://pay?pa=" + encodeURIComponent(UPI_ID)
     + "&pn=" + encodeURIComponent(UPI_NAME)
     + "&am=" + total
     + "&cu=INR"
-    + "&tn=" + encodeURIComponent("Onam Sadhya Registration");
+    + "&tn=" + encodeURIComponent("Birla Alokya Mahabhog Registration");
   document.getElementById("upi-qr").src =
     "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(upiStr) + "&ecc=M";
 }
