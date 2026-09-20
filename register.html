@@ -750,8 +750,10 @@ function calcAmount() {
   const total  = (guestadults * 350);
 
   let breakdown = "";
-  if (adults > 0) breakdown += adults + " adult" + (adults > 1 ? "s" : "") + " × ₹350";
+  if (adults > 0) breakdown += adults + " adult" + (adults > 1 ? "s" : "") + " × ₹0";
   if (kids   > 0) breakdown += (breakdown ? "  +  " : "") + kids + " kid" + (kids > 1 ? "s" : "") + " × ₹0";
+  if (guestadults > 0) breakdown += guestadults + " guest adult" + (guestadults > 1 ? "s" : "") + " × ₹350";
+  if (guestkids   > 0) breakdown += (breakdown ? "  +  " : "") + kids + " guest kid" + (guestkids > 1 ? "s" : "") + " × ₹0";
   if (!breakdown)  breakdown = "—";
 
   document.getElementById("amt-breakdown").textContent = breakdown;
