@@ -359,10 +359,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
   </button>
   <div class="hero-content">
     <div class="hero-chips">
-      <span class="chip">📅 Friday, 16th October 2026 - Wednesday, 21st October 2026</span>
-      <span class="chip">⏰ 8:00 AM onwards everyday</span>
-      <a class="chip" href="https://maps.app.goo.gl/U1HyHkS6fodXsV8X9" target="_blank" style="text-decoration:none;background:rgba(255,255,255,.3)">🗺 View on Google Maps</a>
-      <button class="btn-schedule" onclick="openSchedule()">🎉 View Programme</button>
+      <span class="chip">📅 Sunday, 18th October 2026 /span>
+      <span class="chip">⏰ 11:30 AM onwards everyday</span>
     </div>
   </div>
   <div class="hero-dots">
@@ -409,12 +407,12 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
       <h2>👤 Your Details</h2>
       <div class="field" id="f-name">
         <label>Full Name *</label>
-        <input id="inp-name" type="text" placeholder="e.g. Priya Nair" autocomplete="name"/>
+        <input id="inp-name" type="text" placeholder="e.g. Amit Mohanty" autocomplete="name"/>
         <div class="err-msg">Please enter your full name</div>
       </div>
       <div class="field" id="f-flat">
         <label>BA Villament # *</label>
-        <input id="inp-flat" type="text" placeholder="e.g. B01-01"/>
+        <input id="inp-flat" type="text" placeholder="e.g. B27-01"/>
         <div class="err-msg">Please enter your unit number</div>
       </div>
       <div class="field" id="f-phone">
@@ -424,7 +422,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
       </div>
       <div class="field" id="f-email">
         <label>Email Address <span style="color:var(--gray);font-weight:400">(optional)</span></label>
-        <input id="inp-email" type="email" inputmode="email" placeholder="e.g. priya@gmail.com" autocomplete="email"/>
+        <input id="inp-email" type="email" inputmode="email" placeholder="e.g. ritdudeamit@gmail.com" autocomplete="email"/>
         <div class="hint">Confirmation will be sent to this email if provided</div>
         <div class="err-msg">Enter a valid email address</div>
       </div>
@@ -1046,12 +1044,12 @@ function jsonp(params, { silent = false } = {}) {
 
 // ── Countdown ─────────────────────────────────────────────
 function updateCountdown() {
-  const event = new Date("2026-09-26T09:00:00+05:30");
+  const event = new Date("2026-10-26T12:00:00+05:30");
   const now   = new Date();
   const diff  = event - now;
   if (diff <= 0) {
     document.querySelector(".countdown-wrap").innerHTML =
-      '<div class="countdown-title" style="font-size:18px;color:#fbbf24">🌸 Ponnonam 2026 is Today! 🌸</div>';
+      '<div class="countdown-title" style="font-size:18px;color:#fbbf24">🌸 Birla Alokya Durga Puja Mahabhog 2026 is Today! 🌸</div>';
     return;
   }
   const days  = Math.floor(diff / 86400000);
