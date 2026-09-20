@@ -560,8 +560,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
             <div class="tf"><div class="tk">Villament</div><div class="tv gld" id="conf-flat">—</div></div>
             <div class="tf"><div class="tk">Resident Adults</div><div class="tv" id="conf-adults">—</div></div>
             <div class="tf"><div class="tk">Resident Kids</div><div class="tv" id="conf-kids">—</div></div>
-            <div class="tf"><div class="tk">Guest Adults</div><div class="tv" id="conf-kids">—</div></div>
-            <div class="tf"><div class="tk">Guest Kids</div><div class="tv" id="conf-kids">—</div></div>
+            <div class="tf"><div class="tk">Guest Adults</div><div class="tv" id="conf-guest-adults">—</div></div>
+            <div class="tf"><div class="tk">Guest Kids</div><div class="tv" id="conf-guest-kids">—</div></div>
             <div class="tf"><div class="tk">Amount</div><div class="tv gld" id="conf-amount">—</div></div>
             <div class="tf"><div class="tk">Status</div><div class="tv grn">Pending &#10003;</div></div>
           </div>
@@ -745,7 +745,7 @@ addEventListener("DOMContentLoaded", () => {
 function calcAmount() {
   const adults = Math.max(0, parseInt(document.getElementById("inp-adults").value) || 0);
   const kids   = Math.max(0, parseInt(document.getElementById("inp-kids").value)   || 0);
-  const guestadults = Math.max(0, parseInt(document.getElementById("inp-guest adults").value) || 0);
+  const guestadults = Math.max(0, parseInt(document.getElementById("inp-guest-adults").value) || 0);
   const guestkids = Math.max(0, parseInt(document.getElementById("inp-guest-kids").value) || 0);
   const total  = (guestadults * 350);
 
